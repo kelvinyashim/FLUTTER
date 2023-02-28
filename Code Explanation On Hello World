@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+// The runApp function runs the App and takes a parameter known as MaterialApp
+// The MaterialApp is known as the Root Widget for the App
+ home: Scaffold(
+  //The MaterialApp takes the property known as home 
+  //home: This specifies what will be seen on the homeScreen of the App
+  //The property takes a widget known as Scaffold
+  //Note all properties have widgets
+  //The Scaffold widget define the layout of your App
+
+  appBar: AppBar(
+    //Now the Scaffold takes a property known as appBar
+    //The appBar takes a widget called AppBar
+    title: Text("My first Flutter App"),
+    // The AppBar takes a property called title
+    // The title property is used to give a title to your App
+    // Like Instagram
+    // Like we stated earlier All properties must have widgets
+    // the title property has a widget called Text 
+    // Note This is how we write text in flutter
+    // 
+    centerTitle: true,
+    // The next property is the centerTitle 
+    // The centerTitle is a boolean expression
+    // It centers the title text 
+    backgroundColor: Color.fromARGB(209, 244, 54, 54),
+  ),
+  // Now remember we created home property 
+  // that took a widget called Scaffold
+  // we defined Scaffold as the widget we use to format the layout of our App
+  // Now we move outside of AppBar
+  // Flutter comments out the end of a widget after being created
+  // thats why "AppBar" is a comment on line 28
+  // specifying that we are outside the AppBar Widget
+   body: Center(
+    // Next after the appBar we move to the body of the app
+    // The body property specifiesthe content of your app
+    // The body takes a Widget known as Center and 
+
+     child: Text("Hello World"),
+    // The Center widget takes a property known as child
+    // When a widget is directly nested into another widget it is known as a child
+    // In this case Text widget has been nested into the Center widget
+    // Note the Center widget centralizes whatever is inside of it in this case Text widget
+       
+   ) ,
+   floatingActionButton: FloatingActionButton(
+    //This is just a button position is set to default
+   onPressed: () {  },
+   child: Text("click"),
+   backgroundColor: Colors.red[400],
+   ),
+
+ ),
+));
