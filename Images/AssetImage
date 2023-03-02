@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  // Created a class Home that extends Stateless Widget
+  // A stateless widget means the state of the widget cannot change.
+  // One of the benefits of using Stateless widget is that it enables Hot reload
+  // The stateless widget enables hot reload
+  //If we make a change to the code in stateless widget
+  // Flutter detects it and when it is saved
+  //This then causes the build function to re-run
+  // Flutter then makes the update(s) to the app
+  //Note: It doesnt rebuild the whole app just where the code changes
+  @override
+  // This is used to say that we want to use the build function below
+  //Rather than the one inherited from stateless widget because it has its own
+  //Build function
+    Widget build(BuildContext context) {
+    // The build function is responsible for building up the widget tree
+    // inside the stateless widget
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App "),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 100, 162, 212),
+      ),
+      body: Center(
+        // When a widget is nested directly inside another widget it takes the
+        // property child
+        child: Image(
+          image: AssetImage("lib/assets/blue.jpg"),
+        )
+          ) ,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Text("click"),
+      )
+    );
+    // A semicolon is added to the end of the scaffold widget
+    //Because at the end of a return statement a semicolon is required
+  }
+}
+
+
