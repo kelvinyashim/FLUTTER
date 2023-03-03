@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App "),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 100, 162, 212),
+      ),
+      body: Center(
+        child: Icon(
+          //create an icon widget
+          //that takes Icons
+          //Hover on icon to access its members like color
+          Icons.airport_shuttle,
+          color: Color.fromARGB(255, 6, 64, 112),
+          size: 50,
+
+        ),
+        ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: Text("click"),
+      )
+      
+    );
+  }
+}
+
+
