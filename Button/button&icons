@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App "),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 100, 162, 212),
+      ),
+      body: Center(
+        child: ElevatedButton.icon(
+          //This is how we join a button and an icon
+          // Syntax: button.icon
+          onPressed: () {},
+          icon: Icon(
+            //Now when we use button.icon 
+            //we have to specify the icon property
+            //which takes a widget Icon
+            Icons.mail,
+            size: 10,
+          ),
+          label: Text("mail me"),
+          //Label is the property that sits next to the icon of the button
+          // Note label property is outside the Icon Widget
+          ),
+        ),
+        
+        
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  
+
+        },
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
