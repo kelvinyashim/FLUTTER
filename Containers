@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+      body: Container(
+            //The container widget is a layout widget
+      //It houses other Widgets
+      //A Container with no child property takes up the full space
+      // in this case the body
+        padding: EdgeInsets.symmetric(horizontal:20.0, vertical: 10) ,
+        //Note symmetric takes two values horizontal and vertical
+        //fromLTRB takes for doubles
+        // NOTE: padding is the inside space of an element
+        // margin is 
+        color: Color.fromARGB(139, 122, 91, 23),
+        //This sets the body color
+        child: Text("Hello"),
+        //Now with this child property the container
+        //Restricts itself to the widget of the child
+      ),
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
