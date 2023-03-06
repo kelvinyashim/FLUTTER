@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart'; // Import the material.dart library
+
+void main() {
+  runApp(MyApp()); // Start the app by running the MyApp widget
+}
+
+class MyApp extends StatelessWidget {
+  final List<String> items = [ // Define a list of strings to display
+    'Item 1',
+    'Item 2',
+    'Item 3',
+    'Item 4',
+    'Item 5',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Rows Example', // Set the title of the app
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Rows Example'), // Set the title of the app bar
+        ),
+        body: Column( // Use a column to display a list of rows
+          children: [
+            for (var item in items) // Loop through the list of items
+              Row(
+                children: [
+                  Icon(Icons.arrow_right), // Display an arrow icon
+                  SizedBox(width: 8), // Add some spacing
+                  Text(item), // Display the current item
+                ],
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
