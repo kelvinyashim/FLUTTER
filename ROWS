@@ -1,0 +1,210 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+      body: Row(
+        //WE USE A WIDGET CALLED mainAxisAlignment
+        //TO ALIGN THE WIDGETS IN THE ROW property
+        //Make sure the mainAxisAlignment is directly 
+        //Under the Row property
+        //THE MAIN AXIS ALIGNS TO THE =>
+        mainAxisAlignment: MainAxisAlignment.center ,
+        //In a row widget since we can have more than one widget 
+        // We dont use the property child we use children
+        children: [
+          Text("Hello World",
+          style: TextStyle(
+          color: Colors.brown
+          ),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {},
+            icon: Icon(
+              Icons.mail,
+            ),
+            label: Text("click me"),
+            
+          ),
+          Container(
+            color: Colors.brown,
+            child: Text("berk"),
+            padding: EdgeInsets.all(30.0),
+          ),
+        ],
+        //That is a list which normally contains widgets
+
+
+      ),
+      
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+      body: Row(
+        //WE USE A WIDGET CALLED mainAxisAlignment
+        //TO ALIGN THE WIDGETS IN THE ROW property
+        //Make sure the mainAxisAlignment is directly 
+        //Under the Row property
+        //THE MAIN AXIS ALIGNS TO THE =>
+        mainAxisAlignment: MainAxisAlignment.center ,
+        //In a row widget since we can have more than one widget 
+        // We dont use the property child we use children
+        children: [
+          Text("Hello World",
+          style: TextStyle(
+          color: Colors.brown
+          ),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {},
+            icon: Icon(
+              Icons.mail,
+            ),
+            label: Text("click me"),
+            
+          ),
+          Container(
+            color: Colors.brown,
+            child: Text("berk"),
+            padding: EdgeInsets.all(30.0),
+          ),
+        ],
+        //That is a list which normally contains widgets
+
+
+      ),
+      
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+      body: Row(
+        //WE USE A WIDGET CALLED mainAxisAlignment
+        //TO ALIGN THE WIDGETS IN THE ROW property
+        //Make sure the mainAxisAlignment is directly 
+        //Under the Row property
+        //THE MAIN AXIS ALIGNS TO THE =>
+        mainAxisAlignment: MainAxisAlignment.center ,
+        //In a row widget since we can have more than one widget 
+        // We dont use the property child we use children
+        children: [
+          Text("Hello World",
+          style: TextStyle(
+          color: Colors.brown
+          ),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {},
+            icon: Icon(
+              Icons.mail,
+            ),
+            label: Text("click me"),
+            
+          ),
+          Container(
+            color: Colors.brown,
+            child: Text("berk"),
+            padding: EdgeInsets.all(30.0),
+          ),
+        ],
+        //That is a list which normally contains widgets
+
+
+      ),
+      
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
