@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+
+      //So we have 3,2, and 1 
+      //This means we are splitting the row into 6 portions of width
+      //And allocating the num of width to each expanded widget 
+
+
+    //Expanded widgets are also used to contain images
+    //Within the boundaries of your phone screen
+    //The  above means if we had just put a picture without
+    //Using the expanded widget
+    //The picture would have over-shadowed the other
+    // Contents in the code 
+      body: Row(
+        children: [
+          Expanded(child: 
+          Image.asset("lib/assets/blue.jpg"),
+          flex: 1,
+          ),
+            Expanded(
+              //Expanded widget takes over the available space left
+              //It also has a prorperty called flex 
+              //it takes an int 
+              //and this int reps the width of the expanded wiidget
+              //So the higher the number the more space it takes 
+              //But to see the difference when using the flex property 
+              // you have to have at least 3 of the same widgets expanded 
+              // Like the one below 
+              flex: 3,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.red,
+                child: Text("1"),
+              ),
+            ),
+            Expanded(
+                flex: 2,
+              child: Container(
+                 padding: EdgeInsets.all(30.0),
+                color: Colors.blue,
+                child: Text("2"),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.grey,
+                child: Text("3"),
+              ),
+            ),
+            
+            ]
+            ),
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
