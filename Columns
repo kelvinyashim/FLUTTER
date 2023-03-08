@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+
+ home: Home()
+     // We use the class or Widget created for the home screen of the app
+  // we made am instance of the class Home
+  // the runApp then runs it
+));
+
+class Home extends StatelessWidget {
+  @override
+    Widget build(BuildContext context) {
+  
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("My first Flutter App ",
+        style: TextStyle(
+          color: Colors.brown,
+          fontSize: 30.0
+
+        ),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 241, 241, 238),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        //This controls the columns alignment VERTICALLY
+        //Center it puts the widgets at the center of the column
+        //End it puts the widgets at the end of the column
+        //start is default
+
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+
+        
+
+
+
+
+
+        children: [
+          Container(
+              color: Colors.green,
+              child: Text("GREEN ARROW"),
+              padding: EdgeInsets.all(40.0),
+            ),
+            Container(
+            color: Colors.red,
+            child: Text("THE FLASH"),
+            padding: EdgeInsets.all(10.0),
+            ),
+            Container(
+              color: Colors.grey,
+              padding: EdgeInsets.all(30.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("BATMAN"),
+              ),
+            ),
+          
+
+        ],
+
+
+
+      ),
+         
+        
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text("click"),
+        ),
+      );
+  }
+}
+
+
