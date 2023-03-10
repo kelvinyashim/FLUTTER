@@ -1,0 +1,167 @@
+import 'package:flutter/material.dart';
+//To update data in a StatefulWidget 
+//First you locate what data in the code you want to be mutable
+//Lets say its a Level in University
+//Create a variable above the @overide set it to 0
+//Then in the code perform string interpulation where you want the data updated
+//Next create a function called setState which takes a function
+//As an arguement in itself 
+//write the code 
+//Run the code
+
+
+
+
+void main() => runApp(MaterialApp(
+  home: Flash(),
+));
+
+class Flash extends StatefulWidget {
+  @override
+  State<Flash> createState() => _FlashState();
+}
+
+class _FlashState extends State<Flash> {
+  // you define data here or state that can change.
+  int stuLevel = 0;
+// To change the data in a StatefulWidget we use a function
+// Calld setState(it takes a function () {} as an arguement)
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //The backgroundColor comes first 
+      backgroundColor: Color.fromARGB(255, 63, 66, 63),
+      appBar: AppBar(
+        title: Text("ID CARD"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 39, 41, 39),
+        elevation: 0.0, //This removes the shadow on the AppBar
+
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 30.0, 20.0,0.0),
+        child: Column(
+          
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOXYbOB9oyPhtgiHWDmtp4O-ohqnqv3Ki--g&usqp=CAU"),
+                radius: 40,
+              ),
+            ),
+            Divider(
+              height: 30,
+              color: Colors.black,
+            ),
+            Text(
+              "Name",
+              style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 2.0
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.man,
+                ),
+                SizedBox(width: 10.0,),
+                Text(
+              "Jerimiah Sa'eed Abu",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 2.0
+              ),
+            ),
+              ],
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: [
+
+                    Text(
+              "Phone Number:",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 3.0
+              ),
+              )
+
+              ],
+            ),
+            SizedBox(height: 30),
+              Row(
+                children: [
+                  Icon(
+                      Icons.phone
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      "09018200343",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                        color: Colors.white
+                      ),
+                    ),
+                ],
+              ),
+                SizedBox(height: 30.0),
+                  Text(
+              "Level:",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 3.0
+              ),
+              ),
+               SizedBox(height: 30.0),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.school
+                    ),
+                    SizedBox(width: 15.0),
+                      Text(
+              "$stuLevel",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 2.0
+                ),
+                ),
+                ],
+                ),
+              ],
+                  ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: (){
+              setState(() {
+                  stuLevel += 100;
+                            });
+            },
+            child: Icon(
+              Icons.add, 
+            ),
+            backgroundColor: Colors.grey[800],
+          ),
+        
+
+    );
+  }
+}
