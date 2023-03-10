@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home: Flash(),
+));
+
+class Flash extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //The backgroundColor comes first 
+      backgroundColor: Color.fromARGB(255, 63, 66, 63),
+      appBar: buildAppBar(),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      title: Text("ID CARD"),
+      centerTitle: true,
+      backgroundColor: Color.fromARGB(255, 39, 41, 39),
+      elevation: 0.0, //This removes the shadow on the AppBar
+      
+
+    );
+  }
+}
