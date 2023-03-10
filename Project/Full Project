@@ -1,0 +1,161 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+  home: Flash(),
+));
+
+class Flash extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //The backgroundColor comes first 
+      backgroundColor: Color.fromARGB(255, 63, 66, 63),
+      appBar: AppBar(
+        title: Text("ID CARD"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 39, 41, 39),
+        elevation: 0.0, //This removes the shadow on the AppBar
+
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 30.0, 20.0,0.0),
+        child: Column(
+          
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOXYbOB9oyPhtgiHWDmtp4O-ohqnqv3Ki--g&usqp=CAU"),
+                radius: 40,
+              ),
+            ),
+            Divider(
+              height: 30,
+              color: Colors.black,
+            ),
+            Text(
+              "Name",
+              style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 2.0
+              ),
+            ),
+            SizedBox(
+              height: 30.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Icon(
+                  Icons.man,
+                ),
+                SizedBox(width: 10.0,),
+                Text(
+              "Jerimiah Sa'eed Abu",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 2.0
+              ),
+            ),
+              ],
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: [
+
+                    Text(
+              "Phone Number:",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 3.0
+              ),
+              )
+
+              ],
+            ),
+            SizedBox(height: 30),
+              Row(
+                children: [
+                  Icon(
+                      Icons.phone
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      "09018200343",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                        color: Colors.white
+                      ),
+                    ),
+                ],
+              ),
+                SizedBox(height: 30.0),
+                  Text(
+              "School:",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 3.0
+              ),
+              ),
+               SizedBox(height: 30.0),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.school
+                    ),
+                    SizedBox(width: 15.0),
+                      Text(
+              "Bingham University",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 2.0
+              ),
+            ),
+                  ],
+                ),
+                SizedBox(height: 30),
+                    Text(
+              "Mail:",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 3.0
+              ),
+              ),
+                  SizedBox(height: 30),
+                  Row(
+                    children: [
+                      Icon(
+                      Icons.mail,
+                ),
+                  SizedBox(width: 30),
+                Text(
+              "JerimiahAbu@gmail.com",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: 2.0
+              ),
+            ),
+                    ],
+                  ),
+          ]
+          ),
+        ),
+
+    );
+  }
+}
