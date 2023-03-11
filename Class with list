@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+import "class.dart";
+void main() => runApp(MaterialApp(
+  home: QuoteList()
+));
+
+class QuoteList extends StatefulWidget {
+  @override
+  State<QuoteList> createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+
+  List<Quote> quote = 
+ [
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+ 
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[500] ,
+      appBar: AppBar(
+        title: Text("List"),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
+        body: Column(
+          // A map () circles through a list of data
+          // The map function takes a function as an arguement
+          // with a parameter it could be anything 
+          // so the function quotes.map circles thru the list
+          // and returns a Text widget of each string (quote the parameter)
+          // we convert to list because a children property requires a list
+          children: quote.map((quote) => Text("${quote.text} - ${quote.author}")).toList()
+        ),
+
+
+      );
+      }
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      class Quote{
+   String text;
+   String author;
+
+  //We create an object using named parameters
+
+  Quote({required this.text, required this.author});
+  
+}
+//NOTE ONCE YOU MAKE AN OBJECT OF A CLASS AND INTEND TO USE IT 
+//IN A LIST IF YOU PREVIOUSLY DEFINED THE TYPE OF LIST
+//CHANGE THE TYPE TO THE OBJEECT OF YOUR CLASS NAME
