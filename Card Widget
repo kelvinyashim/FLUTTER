@@ -1,0 +1,84 @@
+import 'package:flutter/material.dart';
+import "class.dart";
+void main() => runApp(MaterialApp(
+  home: QuoteList()
+));
+
+class QuoteList extends StatefulWidget {
+  @override
+  State<QuoteList> createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+
+  List<Quote> quote = 
+ [
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+  Quote(text: "Love all, trust a few, do wrong to none", author:"Thompson Wilder"),
+ 
+  ];
+  //We create a function with a return type widget 
+  //The function is then called 
+  //Before then we create a Card 
+  //We set a margin kind of like border in css
+  //A child property is created because we want to add
+  // a text and the author stacked against each other we 
+  // use a column
+  Widget quoteTemplate (quote) {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Card(
+        margin: EdgeInsets.fromLTRB(16.0,16.0,16.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              quote.text,
+              style: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[800]
+              ),
+            ),
+            Text(
+              quote.author
+            ),
+            SizedBox(
+              height: 15.0,
+            )
+          ],
+        ),
+      ),
+    );
+  }
+    void addQuote (){
+  setState(() {
+    quote.add(Quote(text: "God is Love", author: "Saint John"));
+  });
+}
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[500] ,
+      appBar: AppBar(
+        title: Text("List"),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
+        body: Column(
+          // A map () circles through a list of data
+          // The map function takes a function as an arguement
+          // with a parameter it could be anything 
+          // so the function quotes.map circles thru the list
+          // and returns a Text widget of each string (quote the parameter)
+          // we convert to list because a children property requires a list
+          children: quote.map((quote) => quoteTemplate(quote)).toList(),
+        ),
+         floatingActionButton: FloatingActionButton(
+            onPressed: addQuote,
+            ),
+      );
+      }
+      }
