@@ -46,12 +46,20 @@ class _QuoteListState extends State<QuoteList> {
             ),
             SizedBox(
               height: 15.0,
-            )
-          ],
-        ),
+            ),
+            IconButton(
+            icon: Icon(Icons.delete),
+            onPressed: () {
+              setState(() {
+                quote.remove(quote);
+              });
+            },
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
     void addQuote (){
   setState(() {
     quote.add(Quote(text: "God is Love", author: "Saint John"));
