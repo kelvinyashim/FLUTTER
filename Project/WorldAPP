@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'pages/home.dart';
+import 'pages/loading.dart';
+import 'pages/location.dart';
+void main() => runApp(MaterialApp(
+  initialRoute: "/home",
+  //We use this to test cause we've already 
+  //said that our base route is loading
+
+  routes: {
+  //This is the base route
+  //The value to these routes are going to be functions
+  //The functions take context as an arguement
+  //Context keeps track of where we are in the widget tree
+  //that returns a widget you want shown at the start of your app
+  "/": (context) => Loading(),
+   "/home": (context) => Home(), 
+   "/loacation": (context) => Location()
+   }
+   
+  ));
+    
+
+
+
