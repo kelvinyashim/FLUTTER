@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+
+class Home extends StatefulWidget {
+  
+
+  @override
+  State<Home> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //Without an appbar widget 
+      //whatever we put shows on the battery wifi space
+      //To bring the text (whatever we write in this case Home Screen)
+      //We wrap the Text widget with a new one called SafeArea 
+      body: SafeArea(
+        child: Column(
+          children: [
+            ElevatedButton.icon(
+              onPressed: () {
+                //To use a button when pressed to go to another page or route
+                //we use a Navigator.pushNamed
+                //that takes two arguement the context and the route
+                Navigator.pushNamed(context, "/loacation");
+              },
+              icon: Icon(Icons.edit_location),
+              label: Text("Switch Location"),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class NewWidget extends StatelessWidget {
+  const NewWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text("Home Screen");
+  }
+}
