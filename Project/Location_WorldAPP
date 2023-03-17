@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+class Location extends StatefulWidget {
+
+
+  @override
+  State<Location> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<Location> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Text("Choose Location Screen"),
+      backgroundColor: Colors.grey[200],
+      //Now in flutter once we come to a new page (route) meaning we left one already
+      //if we create an appBar widget we get a back button on it
+      appBar: AppBar(
+        title: Text("Choose Location"),
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+
+    );
+  }
+}
